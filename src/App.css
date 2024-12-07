@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background-color: #FAFAF8;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  height: 80px;
+  background-color: white;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+header>img {
+  width: 50px;
+}
+
+header>h1 {
+  font-weight: 400;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+label>input {
+  margin-left: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #4c939c;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #6bbac9;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.list-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.story {
+  margin: 10px auto;
+  max-width: 760px;
+  padding: 20px;
+  text-align: center;
+}
+
+.story h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.story button {
+  background-color: #4c939c;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.story button:hover {
+  background-color: #6bbac9;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.2);
+  border-top-color: #4c939c;
+  /* Match the button color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .list-div {
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    gap: 15px;
+  }
+
+  .story {
+    max-width: 90%;
+    /* Take most of the screen width */
+    padding: 15px;
+  }
+
+  header {
+    gap: 5px;
+    /* Reduce gap for smaller screens */
+  }
+
+  form {
+    flex-direction: column;
+    /* Stack inputs and button */
+    align-items: stretch;
+    /* Full-width inputs and buttons */
+    gap: 10px;
+  }
+
+  label>input {
+    width: 100%;
+    /* Full-width input fields */
+  }
+
+  button {
+    width: 100%;
+    /* Full-width buttons */
+  }
+}
