@@ -126,37 +126,64 @@ section {
 @media (max-width: 768px) {
   .list-div {
     flex-direction: column;
-    /* Stack items vertically */
     align-items: center;
-    gap: 15px;
+    gap: 10px;
+    /* Reduce gap for tighter layout */
   }
 
   .story {
     max-width: 90%;
-    /* Take most of the screen width */
-    padding: 15px;
+    padding: 10px;
+    /* Reduce padding on smaller screens */
   }
 
-  header {
-    gap: 5px;
-    /* Reduce gap for smaller screens */
+  section {
+    padding: 10px;
+    /* Reduce padding for compactness */
+    margin-bottom: 10px;
+    /* Tighten spacing between sections */
+  }
+
+  h2 {
+    font-size: 18px;
+    /* Further reduce title size on mobile */
+    margin-bottom: 8px;
+    /* Less whitespace below titles */
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    /* Remove extra padding and margins for a tighter list */
+    list-style: none;
+    /* Optional: Remove bullets for a cleaner look */
+  }
+
+  li {
+    font-size: 14px;
+    /* Smaller font for list items */
+    margin: 5px 0;
+    /* Reduce whitespace between items */
+    padding: 0;
+    /* Remove padding */
   }
 
   form {
     flex-direction: column;
-    /* Stack inputs and button */
     align-items: stretch;
-    /* Full-width inputs and buttons */
-    gap: 10px;
+    gap: 8px;
+    /* Reduce spacing between form elements */
   }
 
   label>input {
     width: 100%;
-    /* Full-width input fields */
+    padding: 6px;
+    /* Reduce padding for inputs */
   }
 
   button {
     width: 100%;
-    /* Full-width buttons */
+    padding: 8px;
+    /* Compact button padding */
   }
 }
